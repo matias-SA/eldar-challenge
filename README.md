@@ -1,27 +1,105 @@
-# eldarChallange
+## Acerca del proyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+Este proyecto esta creado para la demostracion de mis aptitudes y skills como desarrollador. Esto lo desarrollo atraves de un challange que consiste en unpagina que enumera distintas exhibiciones. Se ingresa con login y despues tenemos una home en la cual podes editar y crear distintos tipos de exhibiciones. Hay disttintos roles para los usurios. Admin y user.
 
-## Development server
+### Desarrollado con
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* [![Angular][Angular.io]][Angular-url]
 
-## Code scaffolding
+## Empecemos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Intalacion
 
-## Build
+1. Clonar repositorio
+   ```sh
+   git clone https://github.com/matias-SA/eldar-challenge.git
+   ```
+2. Instalar paquetes NPM
+   ```sh
+   npm install
+   ```
+3. Iniciar proyecto
+   ```sh
+   ng serve
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Credenciales
 
-## Running unit tests
+Acontinuacion dejo algunas credenciales para que puedan iniciar sesion en la app.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+user: "Soto" password: "123456"
+user: "Matias" password: "123456",
+```
 
-## Running end-to-end tests
+### Estructura de carpetas
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+elder-app
+├── src
+│ ├── app
+│ │ ├── core
+│ │ │ ├── guards
+│ │ │ ├── interceptors
+│ │ │ ├── models
+│ │ │ ├── services
+│ │ │ ├── utils
+│ │ │ ├ core.module
+│ │ ├── modules
+│ │ │ ├── auth
+│ │ │ │ ├── components
+│ │ │ │ ├── modules
+│ │ │ │ ├── services
+│ │ │ │ ├ auth-routing.module
+│ │ │ │ ├ auth.module
+│ │ │ ├── home
+│ │ │ │ ├── components
+│ │ │ │ ├── modules
+│ │ │ │ ├── services
+│ │ │ │ ├ home-routing.module
+│ │ │ │ ├ home.module
+│ │ ├── shared
+│ │ │ ├── components
+│ │ │ ├── modules
+│ │ │ ├── directives
+│ │ │ ├── pipes
+│ │ │ ├── services
+│ │ │ ├ shared.module
+│ │ ├ app-routing.module
+│ │ ├ app.component
+│ │ ├ app.module
+│ ├ index
+│ ├ main
+│ ├ styles
+├── package.json
 
-## Further help
+Elegi esta estructura de carpetas para tener de una forma mas limpia las funcionalidades de cada carpeta
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Core
+
+Esta sección alberga los elementos fundamentales y centrales de la aplicación. Contiene los
+modelos de dominio, servicios y utilidades comunes utilizados en toda la aplicación.
+Proporcionando una base sólida y coherente para la lógica de negocio y la manipulación de
+datos.
+Su principal beneficio es que al tener una sección central bien definida, se mejora la
+cohesión y el mantenimiento de la lógica de negocio.
+
+### Shared
+
+Esta sección contiene componentes, directivas y servicios compartidos entre diferentes
+módulos de la aplicación. El objetivo principal de esta sección es promover la reutilización
+de código y la consistencia visual en toda la aplicación. Aquí se encuentran elementos que
+pueden ser compartidos entre diferentes módulos funcionales, como componentes UI
+personalizados (Botones, Inputs).
+El beneficio de tener una sección compartida, es que se evita la duplicación de código y se
+fomenta la coherencia en la apariencia y comportamiento de la interfaz de usuario.
+
+### Modulos
+
+Esta sección contiene los diferentes módulos funcionales de la aplicación, cada uno con su
+propia estructura interna. Cuyo propósito es organizar y encapsular la funcionalidad
+específica de cada módulo. Cada módulo puede contener sus propios componentes,
+servicios, archivos de enrutamiento y definiciones de módulo.
+Al dividir la aplicación en módulos, se mejora la modularidad y la claridad del código. 
+
+[Angular-url]: https://angular.io/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
