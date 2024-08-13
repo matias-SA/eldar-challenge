@@ -34,43 +34,7 @@ user: "Matias" password: "123456",
 
 ### Estructura de carpetas
 
-elder-app
-├── src
-│ ├── app
-│ │ ├── core
-│ │ │ ├── guards
-│ │ │ ├── interceptors
-│ │ │ ├── models
-│ │ │ ├── services
-│ │ │ ├── utils
-│ │ │ ├ core.module
-│ │ ├── modules
-│ │ │ ├── auth
-│ │ │ │ ├── components
-│ │ │ │ ├── modules
-│ │ │ │ ├── services
-│ │ │ │ ├ auth-routing.module
-│ │ │ │ ├ auth.module
-│ │ │ ├── home
-│ │ │ │ ├── components
-│ │ │ │ ├── modules
-│ │ │ │ ├── services
-│ │ │ │ ├ home-routing.module
-│ │ │ │ ├ home.module
-│ │ ├── shared
-│ │ │ ├── components
-│ │ │ ├── modules
-│ │ │ ├── directives
-│ │ │ ├── pipes
-│ │ │ ├── services
-│ │ │ ├ shared.module
-│ │ ├ app-routing.module
-│ │ ├ app.component
-│ │ ├ app.module
-│ ├ index
-│ ├ main
-│ ├ styles
-├── package.json
+[![Carpetas estructura][carpetas-screenshot]]
 
 Elegi esta estructura de carpetas para tener de una forma mas limpia las funcionalidades de cada carpeta
 
@@ -103,3 +67,4 @@ Al dividir la aplicación en módulos, se mejora la modularidad y la claridad de
 
 [Angular-url]: https://angular.io/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[carpetas-screenshot]: /src/assets/carpetas_estructura.png
