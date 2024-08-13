@@ -16,9 +16,18 @@ Este proyecto esta creado para la demostracion de mis aptitudes y skills como de
    ```
 2. Instalar paquetes NPM
    ```sh
+   git checkout master
+   ```
+3. Instalar paquetes NPM
+   ```sh
+   git fetch
+   git pull
+   ```
+4. Instalar paquetes NPM
+   ```sh
    npm install
    ```
-3. Iniciar proyecto
+5. Iniciar proyecto
    ```sh
    ng serve
    ```
