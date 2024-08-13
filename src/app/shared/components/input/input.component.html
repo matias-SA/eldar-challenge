@@ -1,0 +1,27 @@
+<label *ngIf="label">{{ label }}</label>
+<div class="flex flex-col mb-3 relative">
+  <input
+    class="p-2 rounded-md"
+    #inputElement
+    [placeholder]="placeholder"
+    maxlength="60"
+    [(ngModel)]="value"
+    (input)="onInput($event)"
+    [type]="type === 'number' ? type : type === 'password' && !showPassword ? 'password' : 'text'"
+    (blur)="handleBlur()"
+    (keyup)="handleKeyUp($event)" />
+    <button (click)="showPassword = !showPassword" *ngIf="showEye && type === 'password'" class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer">
+      <img
+        class="w-5 "
+        src="../../../../assets/svg/{{ showPassword ? imageEyeOpen : imageEyeClose }}.svg"
+        />
+    </button>
+  <span *ngIf="control?.invalid && (control?.dirty || control?.touched)" class="text-sm text-red-600">
+    <ng-container *ngIf="control?.hasError('required')">Este campo es requerido.</ng-container>
+    <ng-container *ngIf="control?.hasError('minlength')">Longitud min 3.</ng-container>
+  </span>
+</div>
+<!-- img {
+  margin-left: -30px;
+  margin-top: 27px;
+} -->

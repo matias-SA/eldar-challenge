@@ -1,0 +1,7 @@
+<button
+  [ngClass]="{'opacity-5': disabled }"
+  class="bg-black text-white py-3 rounded-xl block w-full"
+  (click)="click($event)"
+  [disabled]="disabled">
+  {{text}}
+</button>

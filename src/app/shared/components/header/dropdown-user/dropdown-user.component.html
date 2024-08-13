@@ -1,0 +1,8 @@
+<button class="relative dropdown" (click)="toggleDropdown()">
+  User
+  <div class="hidden absolute shadow-sm z-10 right-0 dropdown-menu w-32" [ngClass]="{'show': isOpen}">
+      <div class="text-sm py-3 px-4 block">Nombre: {{userData.name}}</div>
+      <div class="text-sm py-3 px-4 block">Rol: {{userData.role}}</div>
+      <a (click)="logout()" class="text-sm py-3 px-4 block">Cerrar sesion</a>
+  </div>
+</button>

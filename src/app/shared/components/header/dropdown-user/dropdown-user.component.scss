@@ -1,0 +1,18 @@
+@import "../../../../../scss/main.scss";
+
+.dropdown {
+  display: inline-block;
+
+  .dropdown-menu {
+    background-color: $color-white;
+    a {
+      color: $color-black;
+      &:hover {
+        background-color: $color-white-secondary;
+      }
+    }
+    &.show {
+      display: block;
+    }
+  }
+}

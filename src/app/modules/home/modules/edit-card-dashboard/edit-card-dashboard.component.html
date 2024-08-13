@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+    <app-input formControlName="title" label="Titulo de la exhibicion"></app-input>
+    <app-input formControlName="url" label="Url de la imagen"></app-input>
+    <app-input formControlName="thumbnailUrl" label="Thumbnail url de la exhibicion"></app-input>
+    <app-button [disabled]="form.invalid" (onClick)="handlerClick()" [text]="isEdit ? 'Editar' : 'Agregar'"></app-button>
+</form>
+

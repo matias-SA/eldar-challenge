@@ -1,18 +1,27 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { AuthModule } from "./modules/auth/auth.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HomeModule } from "./modules/home/home.module";
+import { provideHttpClient } from "@angular/common/http";
+import { ToastModule } from "./shared/components/toast/toast.module";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastModule,
+    // Modulos
+    AuthModule,
+    HomeModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideHttpClient()], //ESTO ES NUEVO :O
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

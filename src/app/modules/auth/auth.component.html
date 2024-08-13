@@ -1,0 +1,10 @@
+<div class="auth-container h-screen w-screen flex items-center justify-center">
+  <div class="card-login p-5">
+    <h1 class="text-2xl mb-4">Iniciar sesión</h1>
+    <form [formGroup]="form">
+      <app-input [focus]="true" formControlName="user" placeholder="Ingrese usuario"></app-input>
+      <app-input type="password" [showEye]="true" formControlName="password" placeholder="Ingrese contraseña"></app-input>
+      <app-button [disabled]="form.invalid" (onClick)="login()" text="Ingresar"></app-button>
+    </form>
+  </div>
+</div>

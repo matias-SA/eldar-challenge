@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+    <app-input placeholder="Busca las exhibiciones por titulo" formControlName="search"></app-input>
+</form>
+<div class="flex flex-wrap justify-center gap-7">
+    @if (photos.length !== 0) {
+        @for (photo of photos; track photo.id) {
+            <card-app [dataCard]="photo" [isEditMode]="false"></card-app>
+        }
+    } @else {<div class="text-2xl">No hay datos que mostrar</div>}
+</div>
+
+<div class="flex space py-4 justify-evenly">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Pag anterior</button>
+    <span>Pagina {{ currentPage }} de {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Pag siguiente</button>
+</div>

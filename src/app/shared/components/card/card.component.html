@@ -1,0 +1,17 @@
+<div class="flex flex-col w-60">
+  <img [src]="dataCard.thumbnailUrl" alt="">
+  <div class="flex">
+    <h3>{{dataCard.title}}</h3>
+    @if (isEditMode) {
+      <button class="relative dropdown" (click)="toggleDropdown()">
+        ...
+        <div class="hidden absolute shadow-sm z-10 right-0 dropdown-menu w-32" [ngClass]="{'show': isOpen}">
+            <a [href]="'editar/'+dataCard.id" class="text-sm py-3 px-4 block">Editar</a>
+        </div>
+      </button>
+    }
+  </div>
+</div>
+
+
+<!--  -->

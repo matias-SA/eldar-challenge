@@ -1,0 +1,32 @@
+@import "../../../../scss/main.scss";
+
+.toast {
+  animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-out 2.7s forwards;
+  color: $color-white;
+}
+
+.toast.success {
+  background-color: $green-toast;
+}
+
+.toast.error {
+  background-color: $red-toast;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

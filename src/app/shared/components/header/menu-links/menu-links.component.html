@@ -1,0 +1,7 @@
+<div class="flex gap-7">
+  @for (route of routes; track route.path){
+    @if (route.permission) {
+      <a [href]="route.path">{{route.label}}</a>
+    }
+  }
+</div>
