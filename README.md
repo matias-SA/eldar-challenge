@@ -14,11 +14,11 @@ Este proyecto esta creado para la demostracion de mis aptitudes y skills como de
    ```sh
    git clone https://github.com/matias-SA/eldar-challenge.git
    ```
-2. Instalar paquetes NPM
+2. Cambiar rama master
    ```sh
    git checkout master
    ```
-3. Instalar paquetes NPM
+3. Traerse los cambios 
    ```sh
    git fetch
    git pull
